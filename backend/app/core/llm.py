@@ -1,9 +1,11 @@
+import os
+os.environ["HF_HUB_OFFLINE"] = "1"
+
 import httpx
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from app.core.config import settings
-import os
-os.environ["HF_HUB_OFFLINE"] = "1"
+
 
 _embedder: SentenceTransformer | None = None
 
